@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background-color: #dedede;
+}
+
+.flower {
+    position: absolute;
+    left: 25px;
+    z-index: 1;
+}
+
+.flowers {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(4, 150px);
+    gap: 25px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.flowers div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.close-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    visibility: hidden;
+}
