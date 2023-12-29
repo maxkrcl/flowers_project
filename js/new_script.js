@@ -1,3 +1,13 @@
+// Проверка user agent на наличие подстроки "Mobi" для определения мобильного устройства
+const isMobile = /Mobi/.test(navigator.userAgent);
+
+if (isMobile) {
+    console.log('+');
+} else {
+    console.log('-');
+}
+
+
 // изображение для перемещения
 const flower = document.querySelector('.flower');
 
@@ -28,6 +38,7 @@ flower.addEventListener('touchstart', (event) => {
 });
 
 document.addEventListener('touchmove', (event) => {
+  event.preventDefault();
   if (isMousePressed) {
       flower.style.left = event.touches[0].pageX - flowerX + 'px';
       flower.style.top = event.touches[0].pageY - flowerY + 'px';
@@ -41,7 +52,7 @@ document.addEventListener('touchmove', (event) => {
           }
       });
   }
-});
+}, {passive: false});
 
 flower.addEventListener('touchend', () => {
   isMousePressed = false;
