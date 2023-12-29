@@ -1,13 +1,3 @@
-// Проверка user agent на наличие подстроки "Mobi" для определения мобильного устройства
-const isMobile = /Mobi/.test(navigator.userAgent);
-
-if (isMobile) {
-    console.log('+');
-} else {
-    console.log('-');
-}
-
-
 // изображение для перемещения
 const flower = document.querySelector('.flower');
 
